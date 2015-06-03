@@ -1,0 +1,8 @@
+<ul>
+  <% @gadgets.each do |gadget| %>
+    <li>
+      <%= gadget.name %> | likes: <%= gadget.likes %>
+      <%= link_to "Like", like_gadget_path(gadget) %>
+    </li>
+  <% end %>
+</ul>

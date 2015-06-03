@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Gadget.delete_all
+
+Gadget.create! name: 'Thingamajig', likes: 1880
+Gadget.create! name: 'Doodad', likes: 1488
+Gadget.create! name: 'Whatchamacallit', likes: 200
