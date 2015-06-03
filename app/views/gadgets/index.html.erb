@@ -1,8 +1,9 @@
 <ul>
-  <% @gadgets.each do |gadget| %>
+  <% @gadgets.each_with_index do |gadget, index| %>
     <li>
-      <%= gadget.name %> | likes: <%= gadget.likes %>
-      <%= link_to "Like", like_gadget_path(gadget) %>
+      <%= gadget.name %> |
+      likes: <span class="like-count<%= index %>"><%= gadget.likes %></span>
+      <%= link_to "Like", like_gadget_path(gadget), remote: true, class: 'like-link', data: { index: index } %>
     </li>
   <% end %>
 </ul>
